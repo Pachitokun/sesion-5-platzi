@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSKEMON🐱‍👤</title>
+    <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>poskemon 🔥 💧 🌱</h1>
+
+        <section id="seleccionamascota">
+            <h2>elige tu mascota</h2>
+
+    <div class="tarjetas" id="contenedorTarjetas">
+        <!--<input type="radio" name="mascota" id="greninja"/>
+        <label class="tarjeta-de-mokepon" for="greninja"></label>
+        <div class="card">
+                    <div class="card-image"><img src="./Images/greninja_mokepon.png" alt="greninja"
+                    width="260px" height="240px"></div>
+                <div class="card-text">
+                    <span class="date-1">1 days ago</span>
+                    <h2><i class="fa-fire"></i> greninja</h2>
+                    <p>es un Pokémon de tipo agua/siniestro introducido en la sexta generación. 
+                        Es la evolución de Frogadier.</p>
+                </div>
+                <div class="card-stats card-1">
+                    <div class="stat">
+                        <div class="value">40,0 kg</div>
+                        <div class="type">agua/siniestro</div>
+                    </div>
+                    <div class="border"></div>
+                    <div class="stat">
+                        <div class="value">5123</div>
+                        <div class="type">views</div>
+                    </div>
+                    <div class="border"></div>
+                    <div class="stat">
+                        <div class="value">32</div>
+                        <div class="type">comment</div>
+                    </div>
+        </div>
+        </div>
+        <input type="radio" name="mascota" id="charizad"/>
+        <label class="tarjeta-de-mokepon" for="charizad"></label>
+        <div class="card">
+            
+                    <div class="card-image"><img src="./Images/Charizard_mokepon.png" alt="charizad"
+                    width="260px" height="240px"></div>
+                <div class="card-text">
+                    <span class="date-2">3 days ago</span>
+                    <h2><i class="fa-leaf"></i> charizad</h2>
+                    <p>es un Pokémon de tipo fuego/volador introducido en la primera generación. 
+                        Es la evolución de Charmeleon.</p>
+                </div>
+                <div class="card-stats card-2">
+                    <div class="stat">
+                        <div class="value">90,5 kg</div>
+                        <div class="type">Fuego/Volador</div>
+                    </div>
+                    <div class="border"></div>
+                    <div class="stat">
+                        <div class="value">5123</div>
+                        <div class="type">views</div>
+                    </div>
+                    <div class="border"></div>
+                    <div class="stat">
+                        <div class="value">32</div>
+                        <div class="type">comment</div>
+                    </div>
+                </div>
+            
+        </div>
+        <input type="radio" name="mascota" id="vulvasur"/>
+        <label class="tarjeta-de-mokepon" for="vulvasur"></label>
+        <div class="card">
+            
+                    <div class="card-image"><img src="./Images/Bulbasour_mokepon.png" alt="vulvasur"
+                    width="260px" height="240px"></div>
+                <div class="card-text">
+                    <span class="date-3">5 days ago</span>
+                    <h2><i class="fa-tint"></i> vulvasur</h2>
+                    <p>s un Pokémon de tipo planta/veneno introducido en la primera generación.</p>
+                </div>
+                <div class="card-stats card-3">
+                    <div class="stat">
+                        <div class="value">6,9 kg</div>
+                        <div class="type">Planta/Veneno</div>
+                    </div>
+                    <div class="border"></div>
+                    <div class="stat">
+                        <div class="value">72221</div>
+                        <div class="type">views</div>
+                    </div>
+                    <div class="border"></div>
+                    <div class="stat">
+                        <div class="value">25</div>
+                        <div class="type">comment</div>
+                    </div>
+                </div>
+            
+        </div>-->
+    </div>
+            <button id="botonmascota">seleccionar</button>
+          
+
+        <section id="seemap" class="buttones">
+            <h1 class="titulo">Travel the map with your pet</h1>
+            
+            <canvas id="map"></canvas>
+            <button onmouseup="StopMoving()" onmousedown="MovingTop()" >
+            <img src="./Images/Arriba.png" alt="" width="50px" height="50px"></button>
+            <div class="button_player">
+                <button onmouseup="StopMoving()"  onmousedown="MovingLeft()">
+                <img src="./Images/Izquierda.png" alt="" width="50px" height="50px"></button>
+                <button onmouseup="StopMoving()"  onmousedown="MovingDown()">
+                <img src="./Images/1.png" alt="" width="50px" height="50px"></button>
+            
+                <button onmouseup="StopMoving()"  onmousedown="MovingRight()">
+                <img src="./Images/derecha.png" alt="" width="50px" height="50px"></button>
+            </div>
+        </section>
+
+
+            <section id="selectAttack">
+            <h2>elige tu ataque</h2>
+
+
+            <p>tu mascota <span id="mascotajugador"></span>tiene <span id="vidasjugador">3 vidas</span></p>
+            <p>la mascota <span id="mascotaenemigo"></span>del enemigo <span id="vidasenemigo">3 vidas</span></p>
+            <p>
+                <button id="botonfuego">fuego 🔥</button>
+                <button id="botonagua">agua 💧</button>
+                <button id="botontierra">tierra 🌱</button>
+            </p>
+            </section>
+
+        <section id="mensajes">
+            <p>tu mascota ataco con fuego,la mascota del enemigo ataco con tierra - ganaste🏆</p>
+        </section>
+
+        <section id="reiniciar">
+            <button id="reiniciar">reiniciar</button>
+        </section>
+    <script src="./js/moskepon.js"></script>
+</body>
+</html>
